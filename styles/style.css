@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.top-game {
+  align-items: center;
+  border: 4px solid hsl(217, 16%, 45%);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10vw;
+  padding: 5vw;
+}
+
+.game-name {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.05rem;
+}
+
+.game-score {
+  background-color: white;
+  border-radius: 5px;
+  color: hsl(229, 64%, 46%);
+  font-size: 0.8rem;
+  font-weight: 600;
+  height: 75px;
+  letter-spacing: 0.1rem;
+  padding: 2vw;
+  text-align: center;
+  width: 75px;
+}
+
+#score {
+  color: hsl(229, 25%, 31%);
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: 0rem;
+  line-height: 2.75rem;
+}
+
+.game-board {
+  background-image: url(/assets/images/bg-pentagon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 500px;
+}
+
+.line {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.line:first-child {
+  align-items: center;
+}
+
+.middle-line {
+  justify-content: space-between;
+}
+
+.game-option {
+  align-items: center;
+  background-color: white;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  height: 75px;
+  text-align: center;
+  width: 80px;
+}
