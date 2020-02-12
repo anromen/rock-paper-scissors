@@ -5,56 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>RPSLS</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="top-game">
-    <div class="game-name">
-      ROCK<br>
-      PAPER<br>
-      SCISSOR<br>
-      LIZARD<br>
-      SPOCK
+  <header>
+    <div class="title">
+      <h1>
+        ROCK<br>
+        PAPER<br>
+        SCISSORS<br>
+        LIZARD<br>
+        SPOCK<br>
+      </h1>
     </div>
-    <div class="game-score">
-      SCORE<br>
-      <span id="score">12</span>
+    <div class="score">
+      <p>SCORE</p>
+      <span></span>
     </div>
-  </div>
+  </header>
 
-  <div class="game-board">
-    <div class="line">
-      <div class="game-option scissors">
-        <div>
-          <img src="/assets/images/icon-scissors.svg" alt="Scissors">
-        </div>
-      </div>
+  <main>
+    <div class="options">
+      <div id="scissors"></div>
+      <div id="spock"></div>
+      <div id="paper"></div>
+      <div id="lizard"></div>
+      <div id="rock"></div>
     </div>
-    <div class="line middle-line">
-      <div class="game-option spock">
-        <div>
-          <img src="/assets/images/icon-spock.svg" alt="Spock">
-        </div>
+    <div class="result hidden">
+      <div class="choice" id="user"></div>
+      <div class="result-text">
+        <div class="user-state"></div>
+        <button>PLAY AGAIN</button>
       </div>
-      <div class="game-option paper">
-        <div>
-          <img src="/assets/images/icon-paper.svg" alt="Paper">
-        </div>
-      </div>
+      <div class="choice" id="machine"></div>
     </div>
-    <div class="line">
-      <div class="game-option lizard">
-        <div>
-          <img src="/assets/images/icon-lizard.svg" alt="Lizard">
-        </div>
-      </div>
-      <div class="game-option rock">
-        <div>
-          <img src="/assets/images/icon-rock.svg" alt="Rock">
-        </div>
-      </div>
-
-    </div>
-  </div>
+    <button>RULES</button>
+  </main>
+  <script src="/script.js"></script>
 </body>
 </html>

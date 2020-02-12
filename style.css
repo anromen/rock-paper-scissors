@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  border: 3px solid white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 25vw;
+  padding: 25px;
+}
+
+main {
+  margin: 0 25vw;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.options > div {
+  height: 75px;
+  position: relative;
+  width: 75px;
+}
+
+#scissors::after {
+  content: '';
+  background: url('/assets/images/icon-scissors.svg') center no-repeat;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+#paper::after {
+  content: '';
+  background: url('/assets/images/icon-paper.svg') center no-repeat;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+#rock::after {
+  content: '';
+  background: url('/assets/images/icon-rock.svg') center no-repeat;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+#lizard::after {
+  content: '';
+  background: url('/assets/images/icon-lizard.svg') center no-repeat;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+#spock::after {
+  content: '';
+  background: url('/assets/images/icon-spock.svg') center no-repeat;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.result {
+  display: flex;
+}
+
+.choice {
+  height: 100px;
+  width: 100px;
+}
+
+.hidden {
+  display: none;
+}
+
