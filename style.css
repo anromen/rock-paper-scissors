@@ -29,7 +29,8 @@ main {
   width: 75px;
 }
 
-#scissors::after {
+#scissors::after,
+.scissors {
   content: '';
   background: url('/assets/images/icon-scissors.svg') center no-repeat;
   height: 100%;
@@ -37,7 +38,8 @@ main {
   width: 100%;
 }
 
-#paper::after {
+#paper::after,
+.paper {
   content: '';
   background: url('/assets/images/icon-paper.svg') center no-repeat;
   height: 100%;
@@ -45,7 +47,8 @@ main {
   width: 100%;
 }
 
-#rock::after {
+#rock::after,
+.rock {
   content: '';
   background: url('/assets/images/icon-rock.svg') center no-repeat;
   height: 100%;
@@ -53,7 +56,8 @@ main {
   width: 100%;
 }
 
-#lizard::after {
+#lizard::after,
+.lizard {
   content: '';
   background: url('/assets/images/icon-lizard.svg') center no-repeat;
   height: 100%;
@@ -61,7 +65,8 @@ main {
   width: 100%;
 }
 
-#spock::after {
+#spock::after,
+.spock {
   content: '';
   background: url('/assets/images/icon-spock.svg') center no-repeat;
   height: 100%;
@@ -75,6 +80,7 @@ main {
 
 .choice {
   height: 100px;
+  position: relative;
   width: 100px;
 }
 
