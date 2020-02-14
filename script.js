@@ -4,12 +4,15 @@
   let items = ['rock', 'paper', 'scissors', 'lizard', 'spock']
   let options = document.querySelector('.options');
   let result = document.querySelector('.result');
+  let score = 0;
 
   let handler = function() {
+    let machineChoice = choiceRandomOption();
+    let gameStatus = isUserWinner(this.id, machineChoice);
+
     changeVision();
-    let machine = choiceRandomOption();
-    user.classList.add(this.id);
-    machine.classList.add(machine);
+    setScore(gameStatus);
+    updateData(this.id, machineChoice, gameStatus);
   }
 
   let reset = function() {
@@ -20,6 +23,21 @@
   let changeVision = function() {
     options.classList.toggle('hidden');
     result.classList.toggle('hidden');
+  }
+
+  function updateData(userChoice, machineChoice, gameStatus) {
+    user.classList.add(userChoice);
+    machine.classList.add(machineChoice);
+    winner.innerHTML = getResultMessage(gameStatus);
+    points.innerHTML = score;
+  }
+
+  function setScore(result) {
+    if (result === 1) {
+      score++;
+    } else if (result === 2) {
+      score -= 1;
+    }
   }
 
   function removeClasses() {
