@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,600,700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +7,7 @@
 }
 
 header {
-  border: 3px solid white;
+  border: 3px solid hsl(217, 16%, 45%);
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
@@ -13,8 +15,52 @@ header {
   padding: 25px;
 }
 
+body {
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  color: white;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
 main {
   margin: 0 25vw;
+  position: relative;
+}
+
+main::before {
+  content: "";
+  background-image: url('/assets/images/bg-pentagon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+}
+
+.score {
+  align-self: center;
+  background-color: white;
+  border-radius: 10px;
+  color: hsl(229, 64%, 46%);
+  font-size: 0.8rem;
+  font-weight: 600;
+  height: 75px;
+  letter-spacing: 1px;
+  padding: 5px;
+  text-align: center;
+  width: 75px;
+}
+
+#points {
+  color: hsl(229, 25%, 31%);
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3rem;
 }
 
 .options {
@@ -24,54 +70,51 @@ main {
 }
 
 .options > div {
+  display: grid;
   height: 75px;
   position: relative;
   width: 75px;
 }
 
 #scissors::after,
-.scissors {
+#rock::after,
+#lizard::after,
+#paper::after,
+#spock::after,
+.scissors::after,
+.rock::after,
+.lizard::after,
+.paper::after,
+.spock::after {
   content: '';
-  background: url('/assets/images/icon-scissors.svg') center no-repeat;
   height: 100%;
   position: absolute;
   width: 100%;
+}
+
+#scissors::after,
+.scissors::after {
+  background: url('/assets/images/icon-scissors.svg') center no-repeat;
 }
 
 #paper::after,
-.paper {
-  content: '';
+.paper::after {
   background: url('/assets/images/icon-paper.svg') center no-repeat;
-  height: 100%;
-  position: absolute;
-  width: 100%;
 }
 
 #rock::after,
-.rock {
-  content: '';
+.rock::after {
   background: url('/assets/images/icon-rock.svg') center no-repeat;
-  height: 100%;
-  position: absolute;
-  width: 100%;
 }
 
 #lizard::after,
-.lizard {
-  content: '';
+.lizard::after {
   background: url('/assets/images/icon-lizard.svg') center no-repeat;
-  height: 100%;
-  position: absolute;
-  width: 100%;
 }
 
 #spock::after,
-.spock {
-  content: '';
+.spock::after {
   background: url('/assets/images/icon-spock.svg') center no-repeat;
-  height: 100%;
-  position: absolute;
-  width: 100%;
 }
 
 .result {
