@@ -22,18 +22,11 @@ body {
 }
 
 main {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
   margin: 0 25vw;
   position: relative;
-}
-
-main::before {
-  content: "";
-  background-image: url('/assets/images/bg-pentagon.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-  position: absolute;
-  width: 100%;
 }
 
 .title {
@@ -64,16 +57,27 @@ main::before {
 }
 
 .options {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.options::before {
+  content: "";
+  background-image: url('/assets/images/bg-pentagon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
 
 .options > div {
-  display: grid;
-  height: 75px;
+  border-radius: 50px;
+  height: 100px;
   position: relative;
-  width: 75px;
+  width: 100px;
 }
 
 #scissors::after,
@@ -86,36 +90,78 @@ main::before {
 .lizard::after,
 .paper::after,
 .spock::after {
+  border-radius: 40px;
   content: '';
-  height: 100%;
+  height: 80%;
+  left: 10%;
   position: absolute;
-  width: 100%;
+  top: 10%;
+  width: 80%;
 }
 
 #scissors::after,
 .scissors::after {
-  background: url('/assets/images/icon-scissors.svg') center no-repeat;
+  background: url('/assets/images/icon-scissors.svg') center no-repeat, white;
 }
 
 #paper::after,
 .paper::after {
-  background: url('/assets/images/icon-paper.svg') center no-repeat;
+  background: url('/assets/images/icon-paper.svg') center no-repeat, white;
 }
 
 #rock::after,
 .rock::after {
-  background: url('/assets/images/icon-rock.svg') center no-repeat;
+  background: url('/assets/images/icon-rock.svg') center no-repeat, white;
 }
 
 #lizard::after,
 .lizard::after {
-  background: url('/assets/images/icon-lizard.svg') center no-repeat;
+  background: url('/assets/images/icon-lizard.svg') center no-repeat, white;
 }
 
 #spock::after,
 .spock::after {
-  background: url('/assets/images/icon-spock.svg') center no-repeat;
+  background: url('/assets/images/icon-spock.svg') center no-repeat, white;
 }
+
+#spock,
+#paper,
+#rock,
+#scissors,
+#lizard {
+  position: absolute;
+}
+
+#scissors {
+  background: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  left: 290px;
+  top: 0;
+}
+
+#spock {
+  background: radial-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+  left: 145px;
+  top: 140px;
+}
+
+#lizard {
+  background: radial-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  left: 200px;
+  top: 310px;
+}
+
+#rock {
+  background: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  left: 380px;
+  top: 310px;
+}
+
+#paper {
+  background: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  left: 435px;
+  top: 140px;
+}
+
 
 .result {
   display: flex;
@@ -125,6 +171,17 @@ main::before {
   height: 100px;
   position: relative;
   width: 100px;
+}
+
+#rules {
+  position: absolute;
+  background: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  bottom: 10px;
+  right: -20vw;
 }
 
 .hidden {
