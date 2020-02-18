@@ -5,14 +5,16 @@
   let options = document.querySelector('.options');
   let result = document.querySelector('.result');
   let score = 0;
+  let div = document.createElement('div');
+  div.className = "winner-shadow"
 
   let handler = function() {
     let machineChoice = choiceRandomOption();
-    let gameStatus = isUserWinner(this.id, machineChoice);
+    let winner = isUserWinner(this.id, machineChoice);
 
     changeVision();
-    setScore(gameStatus);
-    updateData(this.id, machineChoice, gameStatus);
+    setScore(winner);
+    updateData(this.id, machineChoice, winner);
   }
 
   let reset = function() {
@@ -25,11 +27,12 @@
     result.classList.toggle('hidden');
   }
 
-  function updateData(userChoice, machineChoice, gameStatus) {
+  function updateData(userChoice, machineChoice, winner) {
     user.classList.add(userChoice);
     machine.classList.add(machineChoice);
-    winner.innerHTML = getResultMessage(gameStatus);
+    userstatus.innerHTML = getResultMessage(winner);
     points.innerHTML = score;
+    decorateWinner(winner);
   }
 
   function setScore(result) {
@@ -43,6 +46,7 @@
   function removeClasses() {
     user.classList.remove(...items);
     machine.classList.remove(...items);
+    div.remove();
   }
 
   function choiceRandomOption() {
@@ -73,6 +77,18 @@
         return 'Victoria';
       case 2: 
         return 'Derrota';
+    }
+  }
+
+  function decorateWinner(winner) {
+    if (winner == 1) {
+      user.append(div);
+      user.append(div);
+      user.append(div);
+    } else if (winner == 2) {
+      machine.append(div);
+      machine.append(div);
+      machine.append(div);
     }
   }
 
