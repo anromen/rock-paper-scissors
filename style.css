@@ -129,7 +129,7 @@ main {
 
 #spock::after,
 .spock::after {
-  background: url('./assets/images/icon-spock.svg') center no-repeat, white;
+  background: url('assets/images/icon-spock.svg') center no-repeat, white;
 }
 
 #spock,
