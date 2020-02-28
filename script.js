@@ -72,22 +72,18 @@
   function getResultMessage(number) {
     switch (number) {
       case 0:
-        return 'Empate';
+        return 'YOU TIE';
       case 1: 
-        return 'Victoria';
+        return 'YOU WIN';
       case 2: 
-        return 'Derrota';
+        return 'YOU LOOSE';
     }
   }
 
   function decorateWinner(winner) {
     if (winner == 1) {
       user.append(div);
-      user.append(div);
-      user.append(div);
     } else if (winner == 2) {
-      machine.append(div);
-      machine.append(div);
       machine.append(div);
     }
   }
